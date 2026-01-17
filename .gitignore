@@ -1,2 +1,9 @@
-/nvim/dot-config/nvim/
+# NeoVim is handled in separate repo
+/nvim
 
+# DankMaterialShell Colorschemes
+/niri/dot-config/niri/dms/
+/ghostty/dot-config/ghostty/themes/dankcolors
+/fish/dot-config/fish/fish_variables
+
+*backup*
