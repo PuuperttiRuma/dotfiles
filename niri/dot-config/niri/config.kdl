@@ -17,7 +17,7 @@ input {
 	    // off
 	    // natural-scroll
 	    // accel-speed 0.2
-	     accel-profile "flat"
+	    accel-profile "flat"
 	    // scroll-factor 1.0
 	    // scroll-factor vertical=1.0 horizontal=-2.0
 	    // scroll-method "no-scroll"
@@ -70,7 +70,7 @@ binds {
     Mod+E                  hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
     Mod+V                  hotkey-overlay-title="Clipboard Manager" { spawn "dms" "ipc" "call" "clipboard" "toggle"; }
     Mod+M                  hotkey-overlay-title="Task Manager" { spawn "dms" "ipc" "call" "processlist" "toggle"; }
-    Mod+N                  hotkey-overlay-title="Notification Center" { spawn "dms" "ipc" "call" "notifications" "toggle"; }
+    // Mod+N                  hotkey-overlay-title="Notification Center" { spawn "dms" "ipc" "call" "notifications" "toggle"; }
     Mod+Shift+N            hotkey-overlay-title="Notepad" { spawn "dms" "ipc" "call" "notepad" "toggle"; }
     // Mod+Y               hotkey-overlay-title="Browse Wallpapers" { spawn "dms" "ipc" "call" "dankdash" "wallpaper"; }
     // Mod+Comma           hotkey-overlay-title="Settings" { spawn "dms" "ipc" "call" "settings" "toggle"; }
@@ -97,6 +97,7 @@ binds {
     XF86AudioPrev       allow-when-locked=true { spawn "playerctl" "previous"; }
     XF86AudioNext       allow-when-locked=true { spawn "playerctl" "next"; }
     XF86AudioPlay       allow-when-locked=true { spawn "playerctl" "play-pause"; }
+
     // === Brightness Controls ===
     XF86MonBrightnessUp    allow-when-locked=true { spawn "dms" "ipc" "call" "brightness" "increment" "5" ""; }
     XF86MonBrightnessDown  allow-when-locked=true { spawn "dms" "ipc" "call" "brightness" "decrement" "5" ""; }
@@ -247,6 +248,7 @@ binds {
     Print                  { screenshot; }
     Ctrl+Print             { screenshot-screen; }
     Alt+Print              { screenshot-window; }
+
     // === System Controls ===
     Mod+Escape             allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Mod+Shift+P            { power-off-monitors; }
@@ -259,6 +261,7 @@ binds {
 
 layout {
     gaps 8  // Gap between windows
+    // empty-workspace-above-first
     background-color "transparent"
     center-focused-column "never"
 
@@ -388,12 +391,14 @@ window-rule {
     match app-id=r#"^org\.wezfurlong\.wezterm$"#
     default-column-width {}
 }
+
 window-rule {
     match app-id=r#"^org\.gnome\."#
     draw-border-with-background false
     geometry-corner-radius 12
     clip-to-geometry true
 }
+
 window-rule {
     match app-id=r#"^gnome-control-center$"#
     match app-id=r#"^pavucontrol$"#
@@ -410,6 +415,7 @@ window-rule {
     match app-id=r#"^blueman-manager$"#
     match app-id=r#"^org\.gnome\.Nautilus$"#
     match app-id=r#"^xdg-desktop-portal$"#
+    match app-id=r#"org.quickshell$"#
     // match app-id=r#"^steam$"#
     open-floating true
 }
@@ -443,3 +449,5 @@ window-rule {
 debug {
     honor-xdg-activation-with-invalid-serial
 }
+
+include "dms/cursor.kdl"
