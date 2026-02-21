@@ -77,6 +77,11 @@ binds {
     // TODO: Open Nvim in dotfiles folder
     // TODO: Open Nvim
 
+    // === Named Workspace Management ===
+    Mod+N { 
+        spawn-sh "name=$(echo | wofi --dmenu --prompt 'Set Workspace Name: ' --width 400 --height 20) && niri msg action set-workspace-name \"$name\""; 
+    }
+
     // === Security ===
     Mod+Alt+L              hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
     Mod+Shift+E            { quit; }
