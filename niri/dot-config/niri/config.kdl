@@ -97,7 +97,7 @@ binds {
     }
 
     // === Security ===
-    Mod+Alt+L              hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
+    Mod+Ctrl+Alt+L         hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
     Mod+Shift+E            { quit; }
     Ctrl+Alt+Delete        hotkey-overlay-title="Task Manager" { spawn "dms" "ipc" "call" "processlist" "toggle"; }
 
@@ -219,9 +219,14 @@ binds {
     Mod+Shift+Alt+Left     { consume-or-expel-window-left; }
     Mod+Shift+Alt+Right    { consume-or-expel-window-right; }
     Mod+Alt+Left           { switch-preset-column-width-back; }
-    Mod+Alt+Right          { switch-preset-column-width; }
     Mod+Alt+Up             { switch-preset-window-height-back; }
     Mod+Alt+Down           { switch-preset-window-height; }
+    Mod+Alt+Right          { switch-preset-column-width; }
+    Mod+Alt+H              { switch-preset-column-width-back; }
+    Mod+Alt+J              { switch-preset-window-height-back; }
+    Mod+Alt+K              { switch-preset-window-height; }
+    Mod+Alt+L              { switch-preset-column-width; }
+
 
     // === Sizing & Layout ===
     Mod+R                  { switch-preset-column-width; }
