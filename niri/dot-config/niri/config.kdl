@@ -37,6 +37,7 @@ input {
 output "Samsung Electric Company S34C65xU HNBYB00386" {
     mode "3440x1440@99.982"
     scale 1.0
+    position x=0 y=0
 
     layout {
         gaps 12
@@ -57,6 +58,23 @@ output "Samsung Electric Company S34C65xU HNBYB00386" {
             bottom 6
         }
 
+    }
+}
+
+output "Dell Inc. DELL U2414H 9TG4657847MS" {
+    mode "1080x1920@60"
+    scale 1.0
+    transform "90"
+
+    layout {
+        preset-window-heights {
+            proportion 0.33333
+            proportion 0.5
+            proportion 0.66667
+            proportion 1.0
+            }
+
+        default-column-width { proportion 1.0; }
     }
 }
 
