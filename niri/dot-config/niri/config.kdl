@@ -107,6 +107,7 @@ binds {
     Mod+Shift+N            hotkey-overlay-title="Notepad" { spawn "dms" "ipc" "call" "notepad" "toggle"; }
     // Mod+Y               hotkey-overlay-title="Browse Wallpapers" { spawn "dms" "ipc" "call" "dankdash" "wallpaper"; }
     // Mod+Comma           hotkey-overlay-title="Settings" { spawn "dms" "ipc" "call" "settings" "toggle"; }
+    Mod+Period             hotkey-overlay-title="Emoji-picker" { spawn "smile"; }
     // TODO: Open Nvim in dotfiles folder
     // TODO: Open Nvim
 
@@ -453,6 +454,13 @@ window-rule {
     default-column-width { proportion 0.5; }
     open-floating false
 }
+
+window-rule {
+    match app-id=r#"it.mijorus.smile$"#
+    default-column-width { fixed 363; }
+    open-floating true
+}
+
 window-rule {
     // Open in a floating window
     match title="Calculator"
