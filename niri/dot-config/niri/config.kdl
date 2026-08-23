@@ -65,6 +65,7 @@ output "Dell Inc. DELL U2414H 9TG4657847MS" {
     mode "1080x1920@60"
     scale 1.0
     transform "90"
+    position x=3440 y=0
 
     layout {
         preset-window-heights {
@@ -76,6 +77,13 @@ output "Dell Inc. DELL U2414H 9TG4657847MS" {
 
         default-column-width { proportion 1.0; }
     }
+}
+
+output "Samsung Electric Company SAMSUNG 0x01000000" {
+    mode "3840x2160@30.000"
+    // position x=0 y=-2160
+    position x=-3840 y=0
+    scale 2.0
 }
 
 gestures {
