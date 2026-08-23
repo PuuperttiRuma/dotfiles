@@ -155,14 +155,22 @@ binds {
     Mod+W                  { toggle-column-tabbed-display; }
 
     // === Navigate Windows ===
-    Mod+Left               { focus-column-or-monitor-left; }
+    Mod+Left               { focus-column-left; }
     Mod+Down               { focus-window-or-workspace-down; }
     Mod+Up                 { focus-window-or-workspace-up; }
-    Mod+Right              { focus-column-or-monitor-right; }
-    Mod+H                  { focus-column-or-monitor-left; }
+    Mod+Right              { focus-column-right; }
+    Mod+H                  { focus-column-left; }
     Mod+J                  { focus-window-or-workspace-down; }
     Mod+K                  { focus-window-or-workspace-up; }
-    Mod+L                  { focus-column-or-monitor-right; }
+    Mod+L                  { focus-column-right; }
+    // Mod+Left               { focus-column-or-monitor-left; }
+    // Mod+Down               { focus-window-or-workspace-down; }
+    // Mod+Up                 { focus-window-or-workspace-up; }
+    // Mod+Right              { focus-column-or-monitor-right; }
+    // Mod+H                  { focus-column-or-monitor-left; }
+    // Mod+J                  { focus-window-or-workspace-down; }
+    // Mod+K                  { focus-window-or-workspace-up; }
+    // Mod+L                  { focus-column-or-monitor-right; }
 
     // === Navigate Workspaces and Monitors ===
     Mod+Ctrl+Left          { focus-monitor-left; }
