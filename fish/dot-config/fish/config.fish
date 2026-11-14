@@ -12,5 +12,10 @@ zoxide init fish --cmd cd | source
 # Set up fzf key bindings
 fzf --fish | source
 
+# ssh keychain
+if status is-interactive
+    keychain --eval --quiet | source
+end
+
 # Generated for envman. Do not edit.
 test -s ~/.config/envman/load.fish; and source ~/.config/envman/load.fish
